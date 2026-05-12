@@ -45,14 +45,10 @@ You can also use `run_app.bat` on Windows or `run_app.sh` in Git Bash.
 1. Push this project to GitHub.
 2. In Streamlit Cloud, create a new app from the repo.
 3. Set the app entry point to `app.py`.
-4. Add your OpenAI key under Streamlit app secrets as `OPENAI_API_KEY`.
-5. Deploy.
+4. Deploy.
+5. **Each user must provide their own OpenAI API key via the app UI** (in the "API Key" expander).
 
-Example secrets format:
-
-```toml
-OPENAI_API_KEY = "sk-your-key-here"
-```
+No API key should be stored in app secrets — users provide their own.
 
 Notes
 - The app stores the API key only in the Streamlit session state, not on disk.

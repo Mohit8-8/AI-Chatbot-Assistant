@@ -11,14 +11,7 @@ def init_session():
 
 
 def get_default_api_key() -> str:
-    env_key = os.getenv("OPENAI_API_KEY", "")
-    if env_key:
-        return env_key
-
-    try:
-        return st.secrets.get("OPENAI_API_KEY", "")
-    except Exception:
-        return ""
+    return os.getenv("OPENAI_API_KEY", "")
 
 
 def set_api_key(key: str):
