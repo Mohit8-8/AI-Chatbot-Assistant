@@ -40,17 +40,7 @@ python -m streamlit run app.py
 
 You can also use `run_app.bat` on Windows or `run_app.sh` in Git Bash.
 
-## Deploy To Streamlit Cloud
-
-1. Push this project to GitHub.
-2. In Streamlit Cloud, create a new app from the repo.
-3. Set the app entry point to `app.py`.
-4. Deploy.
-5. **Each user must provide their own OpenAI API key via the app UI** (in the "API Key" expander).
-
-No API key should be stored in app secrets — users provide their own.
-
-Notes
+Important points in regards to the project
 - The app stores the API key only in the Streamlit session state, not on disk.
 - A local `.env` file is ignored by git and is the easiest way to keep the key available when you run the app.
 - To run from anywhere without `python -m`, add your Python Scripts folder to PATH (e.g. `C:\Users\cason\AppData\Roaming\Python\Python313\Scripts`).
